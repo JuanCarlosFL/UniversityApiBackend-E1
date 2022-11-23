@@ -1,9 +1,10 @@
 ﻿namespace UniversityApiBackend.Enums
 {
-    public enum Levels
+    public enum Level
     {
         Basic,
-        Intermediate,
-        Advanced
+        Medium,
+        Advanced,
+        Expert
     }
 }

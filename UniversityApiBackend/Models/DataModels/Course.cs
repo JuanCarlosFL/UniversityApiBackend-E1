@@ -10,10 +10,14 @@ namespace UniversityApiBackend.Models.DataModels
         [Required, StringLength(280)]
         public string ShortDescription { get; set; } = string.Empty;
         [Required]
-        public string LongDescription { get; set; } = string.Empty;
-        public string TargetAudience { get; set; } = string.Empty;
-        public string Objectives { get; set; } = string.Empty;  
-        public string Requirements { get; set; } = string.Empty;    
-        public Levels Level {  get; set; }
+        public string Description { get; set; } = string.Empty;
+
+        public Level Level { get; set; } = Level.Basic;
+        [Required]
+        public ICollection<Category> Categories { get; set; } = new List<Category>();
+        [Required]
+        public ICollection<Student> Students { get; set; } = new List<Student>();
+        [Required]
+        public Chapter Chapters { get; set; } = new Chapter();
     }
 }
